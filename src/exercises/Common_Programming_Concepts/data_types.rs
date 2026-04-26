@@ -66,4 +66,15 @@ pub fn start() {
     let e: u8 = 255;
     let e = e.saturating_add(1);
     println!("saturating_add: {e}"); // stays at 255
+
+    println!("-----------------");
+
+    println!("Type conversion & static typing");
+
+    // Rust is a statically typed language.
+    // If the compiler cannot infer the type, we must specify it explicitly.
+    // Here, "42" is a &str, and we convert it into a u32.
+
+    let guess: u32 = "42".parse().expect("Not a number");
+    println!("guess = {guess}");
 }
