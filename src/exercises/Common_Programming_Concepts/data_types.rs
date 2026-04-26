@@ -118,4 +118,28 @@ pub fn start() {
     println!("c = {c}");
     println!("z = {z}");
     println!("heart_eyed_cat = {heart_eyed_cat}");
+
+    // ================================================
+    // Compound types
+    // =================================================
+
+    // tuple
+
+    let tup = (1, 'A', "Rustacean", 10.5);
+
+    // indexig
+
+    println!("value = {}", tup.0);
+    println!("value = {}", tup.1);
+    println!("value = {}", tup.2);
+    println!("value = {}", tup.3);
+
+    // destructuring
+
+    let (a, b, c, d) = (1, 'A', "Rustacean", 10.5);
+
+    println!("value = {}", a);
+    println!("value = {}", b);
+    println!("value = {}", c);
+    println!("value = {}", d);
 }
