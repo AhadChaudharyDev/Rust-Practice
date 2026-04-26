@@ -1,0 +1,34 @@
+pub fn variables(){
+    
+    
+    // By default variable in rust are immutable
+    // we cannot modify immutable variable
+    // If we want to make it mut then we use (mut) keyword
+
+
+    // Mutable variable
+    println!("==========Mutable Variable==========");
+    let mut _x = 10;
+    _x = 100;
+    println!("The Value of x is {}",_x);
+    
+
+
+
+    // Immutable variable
+    println!("==========Mutable Variable==========");
+    let y = 10;
+    println!("The value of y is {}",y);
+
+
+    // Shadowing
+
+    let z = 10;
+    {
+        let z='c';
+        println!("the value of z in inner scope is {}",z);        
+        
+    }
+        println!("the value of z in outer scope is {}",z);        
+
+}
