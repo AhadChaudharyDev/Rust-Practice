@@ -123,23 +123,28 @@ pub fn start() {
     // Compound types
     // =================================================
 
-    // tuple
+    // =================================================
+    // Tuple
+    // =================================================
 
-    let tup = (1, 'A', "Rustacean", 10.5);
+    println!("Tuple type inference");
 
-    // indexig
+    // Tuples:
+    // - Store different types
+    // - Have fixed size
+    // - Accessed by destructuring or indexing
 
-    println!("value = {}", tup.0);
-    println!("value = {}", tup.1);
-    println!("value = {}", tup.2);
-    println!("value = {}", tup.3);
+    let tup: (&str, f64, u8) = ("Ahad", 6.4, 1);
 
-    // destructuring
+    // Destructuring
+    let (name, height, id) = tup;
+    println!("name = {name}");
+    println!("height = {height}");
+    println!("id = {id}");
 
-    let (a, b, c, d) = (1, 'A', "Rustacean", 10.5);
-
-    println!("value = {}", a);
-    println!("value = {}", b);
-    println!("value = {}", c);
-    println!("value = {}", d);
+    println!("--------------");
+    // Indexing
+    println!("tup.0 = {}", tup.0);
+    println!("tup.1 = {}", tup.1);
+    println!("tup.2 = {}", tup.2);
 }
