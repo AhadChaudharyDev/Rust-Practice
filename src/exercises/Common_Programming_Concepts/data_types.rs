@@ -89,4 +89,16 @@ pub fn start() {
     let result = a + b;
 
     println!("result = {result}");
+
+    // =================================================
+    // Boolean
+    // =================================================
+
+    println!("Boolean type inference");
+
+    let t = true; // implicit type
+    let u: bool = false; // explicit type
+
+    println!("t = {t}");
+    println!("u = {u}");
 }
