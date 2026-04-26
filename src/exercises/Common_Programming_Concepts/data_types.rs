@@ -101,4 +101,21 @@ pub fn start() {
 
     println!("t = {t}");
     println!("u = {u}");
+
+    // =================================================
+    // Character
+    // =================================================
+
+    println!("Character type inference");
+
+    // char is a Unicode scalar value
+    // It always takes 4 bytes
+
+    let c = 'z';
+    let z: char = 'ℤ';
+    let heart_eyed_cat = '😻';
+
+    println!("c = {c}");
+    println!("z = {z}");
+    println!("heart_eyed_cat = {heart_eyed_cat}");
 }
