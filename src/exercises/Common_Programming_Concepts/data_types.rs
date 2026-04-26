@@ -77,4 +77,16 @@ pub fn start() {
 
     let guess: u32 = "42".parse().expect("Not a number");
     println!("guess = {guess}");
+
+    println!("===============================");
+    println!("Float type inference");
+
+    // Rust has two floating-point types: f32 and f64
+    // Default floating-point type is f64
+
+    let a = 12.5;
+    let b = 12.52;
+    let result = a + b;
+
+    println!("result = {result}");
 }
