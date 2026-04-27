@@ -5,4 +5,5 @@ fn main() {
     exercises::common_programming_concepts::hello_world::hello();
     exercises::common_programming_concepts::variables_and_mutability::variables();
     exercises::common_programming_concepts::data_types::start();
+    exercises::common_programming_concepts::functions::fun();
 }
