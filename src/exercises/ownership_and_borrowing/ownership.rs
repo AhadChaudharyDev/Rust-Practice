@@ -1,0 +1,19 @@
+pub fn ownership() {
+    // =========================================
+    // String literal (&str)
+    // =========================================
+    // &str is a string slice (reference to data)
+    // String literals are:
+    // - immutable
+    // - stored in the binary (read-only memory)
+    // - very fast and lightweight
+
+    let s = "hello"; // valid for the entire scope of main
+
+    {
+        let s = "world"; // valid only inside this block
+        println!("inner scope {s}");
+    } // s goes out of scope here
+
+    println!("outer scope {s}");
+}
