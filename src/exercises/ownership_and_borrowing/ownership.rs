@@ -74,4 +74,21 @@ pub fn ownership() {
     _s3 = String::from("ahoy"); // "hello" memory is dropped here
 
     println!("{_s3}, world");
+
+     println!("--------------------");
+
+    // =========================================
+    // Clone (deep copy)
+    // =========================================
+    // clone():
+    // - copies heap data
+    // - both variables own separate memory
+    // - more expensive than Copy
+
+    let s4 = String::from("Hello");
+    let s5 = s4.clone();
+
+    println!("s4 = {s4} and s5 = {s5}");
+
+    println!("--------------------");
 }
