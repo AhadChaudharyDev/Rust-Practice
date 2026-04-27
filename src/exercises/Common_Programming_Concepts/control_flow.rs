@@ -83,4 +83,26 @@ pub fn control_flow() {
     println!("Liftoff!!!");
 
     println!("--------------------------");
+
+    // =============================
+    // for loop with enumerate
+    // =============================
+
+    let arr = [1, 2, 3, 4, 5];
+
+    for (index, value) in arr.iter().enumerate() {
+        println!("Value on index {} is {}", index, value);
+    }
+
+    println!("--------------------");
+
+    // =============================
+    // for loop with range
+    // =============================
+
+    for number in (1..4).rev() {
+        println!("{number}");
+    }
+
+    println!("LIFTOFF!!!");
 }
