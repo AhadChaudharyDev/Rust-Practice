@@ -16,4 +16,19 @@ pub fn ownership() {
     } // s goes out of scope here
 
     println!("outer scope {s}");
+
+    println!("-------------------");
+
+    // =========================================
+    // String type (heap allocated)
+    // =========================================
+    // String:
+    // - stored on the heap
+    // - mutable
+    // - growable
+
+    let mut v = String::from("Ahad");
+    v.push_str("Chaudhary");
+
+    println!("{v}");
 }
