@@ -2,12 +2,11 @@
 
 | Topic | File |
 |------|------|
-| Hello_World | [Open](src/exercises/common_programming_concepts/hello_world.rs) |
-| Variables_And_Mutables | [Open](src/exercises/common_programming_concepts/variables_and_mutability.rs) |
-| Data_Types | [Open](src/exercises/common_programming_concepts/data_types.rs) |
-| Functions | [Open](src/exercises/common_programming_concepts/functions.rs)|
-| Control_Flows | [Open](src/exercises/common_programming_concepts/control_flows.rs) |
-
+| Hello World | [Open](./hello_world.rs) |
+| Variables And Mutables | [Open](./variables_and_mutability.rs) |
+| Data Types | [Open](./data_types.rs) |
+| Functions | [Open](./functions.rs) |
+| Control Flow | [Open](./control_flow.rs) |
 
 
 
