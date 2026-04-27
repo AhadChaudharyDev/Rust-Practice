@@ -1,10 +1,13 @@
 mod exercises;
 
 fn main() {
-    // Function call
+    // Function call for common_programming_concept
     exercises::common_programming_concepts::hello_world::hello();
     exercises::common_programming_concepts::variables_and_mutability::variables();
     exercises::common_programming_concepts::data_types::start();
     exercises::common_programming_concepts::functions::fun();
-    exercises::common_programming_concepts::control_flow::control_flow();    
+    exercises::common_programming_concepts::control_flow::control_flow();
+
+    // Function call for ownership_and_borrowing
+    exercises::ownership_and_borrowing::ownership::ownership();
 }
