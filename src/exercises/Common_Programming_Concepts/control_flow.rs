@@ -11,4 +11,21 @@ pub fn control_flow() {
     } else {
         println!("The value of x is greater than 5");
     }
+
+    println!("------------------");
+    // =============================
+    // else if (multiple conditions)
+    // =============================
+
+    let number = 6;
+
+    if number % 4 == 0 {
+        println!("number is divisible by 4");
+    } else if number % 3 == 0 {
+        println!("number is divisible by 3");
+    } else if number % 2 == 0 {
+        println!("number is divisible by 2");
+    } else {
+        println!("number is divisible by 1");
+    }
 }
