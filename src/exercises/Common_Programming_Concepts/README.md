@@ -2,8 +2,7 @@
 
 | Topic | File |
 |------|------|
-|
-| Hello_World | [Open](src/exercises/common_programming_concepts/hello-world.rs) |
+| Hello_World | [Open](src/exercises/common_programming_concepts/hello_world.rs) |
 | Variables_And_Mutables | [Open](src/exercises/common_programming_concepts/variables_and_mutability.rs) |
 | Data_Types | [Open](src/exercises/common_programming_concepts/data_types.rs) |
 | Functions | [Open](src/exercises/common_programming_concepts/functions.rs)|
