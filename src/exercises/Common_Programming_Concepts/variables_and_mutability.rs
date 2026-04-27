@@ -10,7 +10,7 @@ pub fn variables() {
     println!("The Value of x is {}", _x);
 
     // Immutable variable
-    println!("==========Mutable Variable==========");
+    println!("==========Immutable Variable==========");
     let y = 10;
     println!("The value of y is {}", y);
 
