@@ -61,4 +61,17 @@ pub fn ownership() {
 
     println!("{s2}");
     // println!("{s1}"); // ❌ error: value used after move
+
+    println!("--------------------");
+    // =========================================
+    // Reassignment and drop
+    // =========================================
+    // When a new value is assigned:
+    // - old heap memory is freed
+    // - new heap memory is allocated
+
+    let mut _s3 = String::from("hello");
+    _s3 = String::from("ahoy"); // "hello" memory is dropped here
+
+    println!("{_s3}, world");
 }
