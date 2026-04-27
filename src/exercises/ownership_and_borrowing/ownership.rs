@@ -91,4 +91,59 @@ pub fn ownership() {
     println!("s4 = {s4} and s5 = {s5}");
 
     println!("--------------------");
+
+    // ===============================
+    // Ownership and functions
+    // ===============================
+
+    // String type:
+    // - stored on the heap
+    // - owns its data
+    // - does NOT implement Copy
+
+    let s6 = String::from("AHadChaudhary!!");
+
+    // Ownership of s6 MOVES into the function
+    // After this call, s6 is no longer valid in main
+    takes_ownership(s6);
+
+    // println!("{s6}"); // ❌ error: value used after move
+
+
+    // String literal:
+    // - type is &str (string slice)
+    // - immutable
+    // - does NOT own the data
+    // - implements Copy
+
+    let a = "Alhumdulillah";
+
+    // a is a &str (reference), so it is COPIED
+    // Ownership does NOT move
+    makes_copy(a);
+
+    // a is still valid here
 }
+
+// =================================
+// Function that takes ownership
+// =================================
+
+fn takes_ownership(some_string: String) {
+    // some_string now OWNS the heap memory
+    println!("Take ownership = {some_string}");
+}
+// some_string goes out of scope here
+// drop() is called and heap memory is freed
+
+
+// =================================
+// Function that borrows a string slice
+// =================================
+
+fn makes_copy(string_literal: &str) {
+    // string_literal is a borrowed reference
+    // No ownership, no heap cleanup needed
+    println!("Copy = {string_literal}");
+}
+
