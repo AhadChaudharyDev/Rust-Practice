@@ -75,7 +75,7 @@ pub fn ownership() {
 
     println!("{_s3}, world");
 
-     println!("--------------------");
+    println!("--------------------");
 
     // =========================================
     // Clone (deep copy)
@@ -109,7 +109,6 @@ pub fn ownership() {
 
     // println!("{s6}"); // ❌ error: value used after move
 
-
     // String literal:
     // - type is &str (string slice)
     // - immutable
@@ -123,6 +122,21 @@ pub fn ownership() {
     makes_copy(a);
 
     // a is still valid here
+
+    println!("------------------------");
+    // ===============================
+    // Return Values and Scope
+    // ===============================
+
+    let s7 = gives_ownership();
+
+    println!("Give ownership = {s7}");
+
+    let s7 = String::from("what's up?");
+
+    let s8 = takes_and_gives_back(s7);
+
+    println!("Gives and take back ownership = {s8}");
 }
 
 // =================================
@@ -136,7 +150,6 @@ fn takes_ownership(some_string: String) {
 // some_string goes out of scope here
 // drop() is called and heap memory is freed
 
-
 // =================================
 // Function that borrows a string slice
 // =================================
@@ -147,3 +160,31 @@ fn makes_copy(string_literal: &str) {
     println!("Copy = {string_literal}");
 }
 
+// =================================
+// Function that gives ownership
+// =================================
+
+// This function:
+// - creates a String on the heap
+// - returns it to the caller
+// - ownership is transferred to the caller
+
+fn gives_ownership() -> String {
+    let s7 = String::from("Heyyyy");
+
+    // Returning s7 moves ownership to the caller
+    s7
+    // No drop here because ownership is moved
+}
+
+// This function:
+// - takes ownership of a String as a parameter
+// - returns the same String back
+// - ownership moves in and then moves out
+
+fn takes_and_gives_back(a_string: String) -> String {
+    // a_string owns the heap memory here
+
+    a_string
+    // Ownership is moved back to the caller
+}
