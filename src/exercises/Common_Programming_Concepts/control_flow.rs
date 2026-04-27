@@ -28,4 +28,16 @@ pub fn control_flow() {
     } else {
         println!("number is divisible by 1");
     }
+
+    println!("------------------");
+
+    // =============================
+    // if as an expression (returns value)
+    // =============================
+    let condition = true;
+
+    let value = if condition { 5 } else { 6 };
+    //  if expression return value
+
+    println!("value = {value}");
 }
