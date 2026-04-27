@@ -70,5 +70,17 @@ pub fn control_flow() {
 
     println!("------------------");
 
-    
+    // =============================
+    // while loop
+    // =============================
+
+    let mut num = 0;
+
+    while num != 0 {
+        println!("{num}");
+        num -= 1;
+    }
+    println!("Liftoff!!!");
+
+    println!("--------------------------");
 }
