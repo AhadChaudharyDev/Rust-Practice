@@ -105,4 +105,27 @@ pub fn control_flow() {
     }
 
     println!("LIFTOFF!!!");
+
+    println!("---------------------");
+
+    // Disambiguating with Loop Labels
+
+    let mut count = 0;
+
+    'label_up: loop {
+        let mut remaining = 10;
+        println!("count = {}", count);
+        loop {
+            println!("remaining = {}", remaining);
+            if remaining == 9 {
+                break;
+            }
+            if count == 2 {
+                break 'label_up;
+            }
+            remaining -= 1;
+        }
+        count += 1;
+    }
+    println!("End count = {count}");
 }
