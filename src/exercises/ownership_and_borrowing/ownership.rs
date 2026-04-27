@@ -31,4 +31,22 @@ pub fn ownership() {
     v.push_str("Chaudhary");
 
     println!("{v}");
+
+    println!("-----------------");
+
+    // =========================================
+    // Copy (stack-only data)
+    // =========================================
+    // Integers implement the Copy trait
+    // Assignment creates a new copy of the value
+
+    let mut x=5;
+    let y=x;
+
+    x=10;
+
+    println!("value of x is {}",x);
+    println!("value of y is {}",y);
+
+    println!("----------------");
 }
