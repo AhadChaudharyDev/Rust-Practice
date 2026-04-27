@@ -40,4 +40,35 @@ pub fn control_flow() {
     //  if expression return value
 
     println!("value = {value}");
+
+    println!("------------------");
+
+    // =============================
+    // loop (infinite loop)
+    // =============================
+    loop {
+        println!("AhadChaudhary");
+        break; // stop loop
+    }
+
+    println!("------------------");
+
+    // =============================
+    // loop returning a value
+    // =============================
+
+    let mut counter = 0;
+
+    let result = loop {
+        if counter == 10 {
+            break counter * 2;
+        }
+        counter += 1;
+    };
+
+    println!("result = {result}");
+
+    println!("------------------");
+
+    
 }
