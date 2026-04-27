@@ -40,13 +40,25 @@ pub fn ownership() {
     // Integers implement the Copy trait
     // Assignment creates a new copy of the value
 
-    let mut x=5;
-    let y=x;
+    let mut x = 5;
+    let y = x;
 
-    x=10;
+    x = 10;
 
-    println!("value of x is {}",x);
-    println!("value of y is {}",y);
+    println!("value of x is {}", x);
+    println!("value of y is {}", y);
 
     println!("----------------");
+
+    // =========================================
+    // Move ownership (heap data)
+    // =========================================
+    // String does NOT implement Copy
+    // Ownership is moved instead of copied
+
+    let s1 = String::from("Rustacean");
+    let s2 = s1; // ownership moves from s1 to s2
+
+    println!("{s2}");
+    // println!("{s1}"); // ❌ error: value used after move
 }
