@@ -11,6 +11,28 @@ pub fn slice_type() {
     // Find second word
     let s_word = second_word(&s);
     println!("second word = {s_word}");
+
+    // ===============================
+    // String literal (&str)
+    // ===============================
+    // String literals are already slices
+    let s1 = "hello world";
+
+    // Taking a slice of a string literal
+    let word1 = &s1[..5];
+    println!("{word1}");
+
+    // ===============================
+    // Other slices (array slices)
+    // ===============================
+    let array = [1, 2, 3, 4, 5];
+
+    // Slice from index 1 up to (but not including) 3
+    let slice = &array[1..3];
+
+    // Assert that slice equals [2, 3]
+    assert_eq!(slice, &[2, 3]);
+    println!("{:?}", slice);
 }
 
 // ---------------------------------
