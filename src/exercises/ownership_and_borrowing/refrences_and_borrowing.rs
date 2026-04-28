@@ -41,6 +41,22 @@ pub fn borrowing() {
 
     // Rust prevents data races at compile time
     // We also cannot have mutable and immutable references at the same time
+
+    println!("----------------");
+
+    // =============================
+    // Multiple mutable references using scopes
+    // =============================
+
+    let mut x = String::from("Hello");
+
+    {
+        let x2 = &mut x;
+        println!("x2 = {x2}");
+    } // x2 goes out of scope here (mutable borrow ends)
+    
+    let x1 = &mut x; // ✅ now allowed
+    println!("x1 = {x1}");
 }
 
 // =============================
