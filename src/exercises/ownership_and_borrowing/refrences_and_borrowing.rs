@@ -27,6 +27,20 @@ pub fn borrowing() {
     let s3 = modify_borrowing_ref(&mut s2);
 
     println!("Mutable reference result: {s3}");
+
+    // =============================
+    // Only ONE mutable reference at a time
+    // =============================
+
+    let mut x = String::from("Hello");
+
+    let _x1 = &mut x;
+    // let x2 = &mut x; // ❌ NOT allowed: second mutable borrow
+
+    // println!("x1 = {x1}, x2 = {x2}");
+
+    // Rust prevents data races at compile time
+    // We also cannot have mutable and immutable references at the same time
 }
 
 // =============================
@@ -50,9 +64,9 @@ fn calculate_length(cal: &String) -> usize {
 fn modify_borrowing_ref(some_string: &mut String) -> &String {
     // Because we have a MUTABLE reference,
     // we ARE allowed to modify the borrowed value
-    some_string.push_str("God willing, if I keep working like this, I will become a great developer");
+    some_string
+        .push_str("God willing, if I keep working like this, I will become a great developer");
 
     // Returning an immutable reference to the same String
     some_string
-    
 }
