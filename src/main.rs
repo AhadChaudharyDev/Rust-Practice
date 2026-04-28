@@ -11,4 +11,5 @@ fn main() {
     // Function call for ownership_and_borrowing
     exercises::ownership_and_borrowing::ownership::ownership();
     exercises::ownership_and_borrowing::refrences_and_borrowing::borrowing();
+    exercises::ownership_and_borrowing::the_slice_type::slice_type();  
 }
