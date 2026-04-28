@@ -54,9 +54,18 @@ pub fn borrowing() {
         let x2 = &mut x;
         println!("x2 = {x2}");
     } // x2 goes out of scope here (mutable borrow ends)
-    
+
     let x1 = &mut x; // ✅ now allowed
     println!("x1 = {x1}");
+
+    println!("----------------");
+
+    // ==================================
+    // Dangling Refrences
+    // ==================================
+
+    let _refrence_to_nothing = dangle();
+
 }
 
 // =============================
@@ -86,3 +95,14 @@ fn modify_borrowing_ref(some_string: &mut String) -> &String {
     // Returning an immutable reference to the same String
     some_string
 }
+
+// If we returned `&String`, this would cause a compile-time error
+// because it would point to memory that no longer exists.
+//
+// Instead, we return the OWNED `String`
+fn dangle() -> String { 
+    let s = String::from("Heyyyyy");
+
+    s
+}// Here, s goes out of scope but it's memory is not dropped
+  // Danger! if we return &s
