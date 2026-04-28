@@ -15,6 +15,18 @@ pub fn borrowing() {
     // We can still use `s` here
     // because ownership was not moved, only borrowed
     println!("The length of {s} is {s1}");
+
+    println!("----------------");
+    // =============================
+    // Mutable references
+    // =============================
+
+    let mut s2 = String::from("Ahad Chaudhary, ");
+
+    // Passing a MUTABLE reference
+    let s3 = modify_borrowing_ref(&mut s2);
+
+    println!("Mutable reference result: {s3}");
 }
 
 // =============================
@@ -29,4 +41,18 @@ fn calculate_length(cal: &String) -> usize {
     // Only the length is returned
     // The String is NOT dropped here
     length
+}
+
+// =============================
+// Borrowing (mutable reference)
+// =============================
+
+fn modify_borrowing_ref(some_string: &mut String) -> &String {
+    // Because we have a MUTABLE reference,
+    // we ARE allowed to modify the borrowed value
+    some_string.push_str("God willing, if I keep working like this, I will become a great developer");
+
+    // Returning an immutable reference to the same String
+    some_string
+    
 }
