@@ -137,6 +137,18 @@ pub fn ownership() {
     let s8 = takes_and_gives_back(s7);
 
     println!("Gives and take back ownership = {s8}");
+
+    println!("----------------------");
+
+    // =============================
+    // Return multiple value using tuple
+    // =============================
+
+    let d = String::from("AadChaudhary");
+
+    let (d1 , len) = cal_len(d);
+
+    println!("The length of '{d1}' is {len}.");
 }
 
 // =================================
@@ -187,4 +199,12 @@ fn takes_and_gives_back(a_string: String) -> String {
 
     a_string
     // Ownership is moved back to the caller
+}
+
+fn cal_len(d: String)->(String,usize){
+    
+    let length = d.len();
+
+    (d , length)
+
 }
